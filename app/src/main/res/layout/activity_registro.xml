@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".registro">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/txtUserIdR"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:hint="USERID"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/txtIdR"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:hint="ID"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/txtTitleR"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:hint="Title"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:id="@+id/btnRegistrar"/>
+
+</LinearLayout>

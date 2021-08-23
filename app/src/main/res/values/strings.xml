@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Primera</string>
+    
+    <string-array name="booleano">
+        <item>Seleccione una opción</item>
+        <item>True</item>
+        <item>False</item>
+    </string-array>
+</resources>
