@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         if (loadData()) {
             val sharedPreferences: SharedPreferences = getSharedPreferences("sharedPreference", Context.MODE_PRIVATE)
             val saveEmail: String = sharedPreferences.getString("correo", null).toString()
-            start(saveEmail)
+            val savePass: String = sharedPreferences.getString("pass", null).toString()
+            start(saveEmail, savePass)
         }
 
 
@@ -36,20 +37,25 @@ class MainActivity : AppCompatActivity() {
             var correo = txtCorreo.text.toString();
             var contrasena = txtContrasena.text.toString();
             saveData(correo, true, contrasena)
-            start(correo)
+            start(correo, contrasena)
         }
     }
 
 
-    private fun start (correo: String) {
+    private fun start (correo: String, contrasena: String) {
         val result:Boolean = correo.contains("@")
         if (result) {
-            val intent = Intent(this, menuList::class.java).apply {
+            if (contrasena.isEmpty()) {
+                Toast.makeText(this, "Ingrese una contraseña", Toast.LENGTH_LONG).show()
+            }else {
+                Toast.makeText(this, "$contrasena", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, menuList::class.java).apply {
 
+                }
+                //Toast.makeText(this, "Sesión iniciada", Toast.LENGTH_LONG).show()
+                startActivity(intent)
+                finish()
             }
-            Toast.makeText(this, "Sesión iniciada", Toast.LENGTH_LONG).show()
-            startActivity(intent)
-            finish()
         }else {
             Toast.makeText(this, "Ingresa un correo valido", Toast.LENGTH_LONG).show()
         }

@@ -129,11 +129,11 @@ class registro : AppCompatActivity() {
         val txtIdR = findViewById<EditText>(R.id.txtIdR)
         val txtTitleR = findViewById<EditText>(R.id.txtTitleR)
 
-        if (txtUserIdR.text.toString() == "") {
+        if (txtUserIdR.text.toString().isEmpty()) {
             Toast.makeText(this@registro, "Ingresar USERID", Toast.LENGTH_LONG).show()
-        }else if (txtIdR.text.toString() == "") {
+        }else if (txtIdR.text.toString().isEmpty()) {
             Toast.makeText(this@registro, "Ingresar ID", Toast.LENGTH_LONG).show()
-        }else if (txtTitleR.text.toString() == ""){
+        }else if (txtTitleR.text.toString().isEmpty()){
             Toast.makeText(this@registro, "Ingresar Title", Toast.LENGTH_LONG).show()
         }else if (completed == "Seleccione una opción") {
             Toast.makeText(this@registro, "Por favor seleccione true o false", Toast.LENGTH_LONG).show()
