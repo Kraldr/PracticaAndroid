@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val txtCorreo = findViewById<EditText>(R.id.txtCorreo)
         val txtContrasena = findViewById<EditText>(R.id.txtContrasena)
         val button = findViewById<Button>(R.id.btnIngresar)
+
         if (loadData()) {
             val sharedPreferences: SharedPreferences = getSharedPreferences("sharedPreference", Context.MODE_PRIVATE)
             val saveEmail: String = sharedPreferences.getString("correo", null).toString()
@@ -48,7 +49,6 @@ class MainActivity : AppCompatActivity() {
             if (contrasena.isEmpty()) {
                 Toast.makeText(this, "Ingrese una contraseña", Toast.LENGTH_LONG).show()
             }else {
-                Toast.makeText(this, "$contrasena", Toast.LENGTH_LONG).show()
                 val intent = Intent(this, menuList::class.java).apply {
 
                 }
